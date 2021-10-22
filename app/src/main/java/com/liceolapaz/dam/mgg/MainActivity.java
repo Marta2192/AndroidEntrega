@@ -19,10 +19,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onLogin(String usuario, String password) {
 
+
                 if (usuario.equals("admin") && password.equals("liceo"))
                     ctlLogin.setMensaje("Login correcto!");
                 else
                     ctlLogin.setMensaje("Usuario y/o contraseña incorrectos.");
+
+
+
+
+
+
             }
         });
     }
