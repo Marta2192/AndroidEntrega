@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                 if (usuario.equals("admin") && password.equals("liceo"))
                     ctlLogin.setMensaje("Login correcto!");
                 else
-                    ctlLogin.setMensaje("Vuelva a intentarlo.");
+                    ctlLogin.setMensaje("Usuario y/o contraseña incorrectos.");
             }
         });
     }

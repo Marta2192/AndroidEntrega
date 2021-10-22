@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
-        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/login.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/drawable/button_border.xml" value="0.2203125" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/activity_main.xml" value="0.5574204946996466" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/login.xml" value="0.6226415094339622" />
       </map>
     </option>
   </component>

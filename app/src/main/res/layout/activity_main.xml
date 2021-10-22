@@ -5,13 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
+    android:background="#A9ACAE"
     tools:context=".MainActivity">
 
     <com.liceolapaz.dam.mgg.Login
         android:id="@+id/CtlLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#EDEDED"
-        sgo:login_text="Entrar"/>
+        android:background="#03A9F4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        sgo:login_text="LOGIN" />
 
 </LinearLayout>

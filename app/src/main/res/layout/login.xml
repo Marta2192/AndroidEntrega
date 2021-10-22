@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:background="@drawable/button_border"
+    android:padding="10dp">
 
     <TextView android:id="@+id/lblUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/usuario"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <EditText android:id="@+id/txtUsuario"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:inputType="text" />
+        android:inputType="textCapSentences|textNoSuggestions"
+        android:textColor="@color/white" />
 
     <TextView android:id="@+id/lblPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contraseña:"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <EditText android:id="@+id/txtPassword"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:textColor="@color/white"
         android:inputType="textPassword" />
 
     <LinearLayout
@@ -33,17 +39,23 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnAceptar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnAceptar"
-            android:text="Login"
+
+
+            android:backgroundTint="@color/light_blue"
             android:paddingLeft="20dp"
-            android:paddingRight="20dp" />
+            android:paddingRight="20dp"
+            android:text="Login"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_border" />
 
         <TextView android:id="@+id/lblMensaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
     </LinearLayout>
