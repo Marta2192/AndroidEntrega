@@ -4,7 +4,7 @@
 
     <item android:id="@+id/action_nuevo"
         android:title="@string/action_nuevo"
-        android:icon="@drawable/app_color"
+        android:icon="@drawable/suma_toolbar"
         android:orderInCategory="100"
         app:showAsAction="ifRoom|withText" />
 

@@ -5,5 +5,6 @@
     <string name="usuario">Usuario:</string>
     <string name="action_nuevo">Nuevo</string>
     <string name="ListaUsuarios">Lista de Usuarios</string>
+    <string name="NumeroUsuarios">Número de Usuarios:</string>
 
 </resources>

@@ -26,34 +26,27 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                    if (usuario.equals("admin") && password.equals("liceo"))
-                        ctlLogin.setMensaje("Login correcto!");
-                            Intent intent =
-                                    new Intent(MainActivity.this, Scene2.class);
+                if (usuario.equals("admin") && password.equals("liceo")) {
+                    ctlLogin.setMensaje("Login correcto!");
+                    Intent intent =
+                            new Intent(MainActivity.this, Scene2.class);
 
-                            //Creamos la información a pasar entre actividades
-                            Bundle b = new Bundle();
+                    Bundle b = new Bundle();
+
+                    intent.putExtras(b);
+
+                    startActivity(intent);
+
+                    finish();
+                }
+                if(!usuario.equals("admin") || !password.equals("liceo")) {
+                    ctlLogin.setMensaje("Usuario y/o contraseña incorrectos.");
+                    ++contador;
+                }
 
 
-                            //Añadimos la información al intent
-                            intent.putExtras(b);
-
-                            //Iniciamos la nueva actividad
-                            startActivity(intent);
-
-                            finish();
-
-                    if(!usuario.equals("admin") || !password.equals("liceo")) {
-                        ctlLogin.setMensaje("Usuario y/o contraseña incorrectos.");
-                        ++contador;
-                    }
-
-                
                 if((!usuario.equals("admin") || !password.equals("liceo")) && contador >=3)
                     System.exit(0);
-
-
-
 
 
 
@@ -63,25 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
-        /*btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Creamos el Intent
-                Intent intent =
-                        new Intent(MainActivity.this, AppBar.class);
-
-                //Creamos la información a pasar entre actividades
-                Bundle b = new Bundle();
-
-
-                //Añadimos la información al intent
-                intent.putExtras(b);
-
-                //Iniciamos la nueva actividad
-                startActivity(intent);
-            }
-        });*/
-
 
 
     }
