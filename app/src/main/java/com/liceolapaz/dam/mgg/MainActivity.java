@@ -2,12 +2,14 @@ package com.liceolapaz.dam.mgg;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
     private Login ctlLogin;
+    private Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,21 @@ public class MainActivity extends AppCompatActivity {
 
                     if (usuario.equals("admin") && password.equals("liceo"))
                         ctlLogin.setMensaje("Login correcto!");
+                            Intent intent =
+                                    new Intent(MainActivity.this, Scene2.class);
+
+                            //Creamos la información a pasar entre actividades
+                            Bundle b = new Bundle();
+
+
+                            //Añadimos la información al intent
+                            intent.putExtras(b);
+
+                            //Iniciamos la nueva actividad
+                            startActivity(intent);
+
+                            finish();
+
                     if(!usuario.equals("admin") || !password.equals("liceo")) {
                         ctlLogin.setMensaje("Usuario y/o contraseña incorrectos.");
                         ++contador;
@@ -41,6 +58,31 @@ public class MainActivity extends AppCompatActivity {
 
 
             }
+
+
+
+
         });
+        /*btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Creamos el Intent
+                Intent intent =
+                        new Intent(MainActivity.this, AppBar.class);
+
+                //Creamos la información a pasar entre actividades
+                Bundle b = new Bundle();
+
+
+                //Añadimos la información al intent
+                intent.putExtras(b);
+
+                //Iniciamos la nueva actividad
+                startActivity(intent);
+            }
+        });*/
+
+
+
     }
 }

@@ -1,7 +1,9 @@
 package com.liceolapaz.dam.mgg;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,5 +75,6 @@ import android.widget.TextView;
         public void setMensaje(String msg) {
             lblMensaje.setText(msg);
         }
+
 
 }

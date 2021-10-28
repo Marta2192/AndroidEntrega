@@ -4,8 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/drawable/button_border.xml" value="0.2203125" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/drawable/ic_nuevo.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/activity_main.xml" value="0.5574204946996466" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/app_bar.xml" value="0.1578125" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/appbar_layout.xml" value="0.1515625" />
         <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/login.xml" value="0.6226415094339622" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/scene2.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/layout/toolbar.xml" value="0.1671875" />
+        <entry key="..\:/Users/user/Desktop/Android/Ejercicio1mgg/app/src/main/res/menu/menu_main.xml" value="0.1578125" />
       </map>
     </option>
   </component>
