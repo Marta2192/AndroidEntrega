@@ -1,50 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#001EC5">
+    android:background="@drawable/button_border"
+    android:orientation="vertical"
+    >
 
     <include
         android:id="@+id/appbar"
-        layout="@layout/toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        layout="@layout/toolbar" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"
         android:background="#3F51B5"
-        android:gravity="right"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/appbar">
+
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/lblNumUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_gravity="right"
             android:text="@string/NumeroUsuarios"
             android:textColor="@color/white"
             android:textStyle="bold" />
 
-    </LinearLayout>
 
 
-    <!--<androidx.recyclerview.widget.RecyclerView
+
+    <androidx.recyclerview.widget.RecyclerView
          android:id="@+id/recView"
          android:layout_width="match_parent"
-         android:layout_height="234dp"
-         android:background="#3F51B5"
-        android:layout_marginTop="150dp"
-         app:layout_constraintStart_toStartOf="parent"
-         tools:layout_editor_absoluteY="87dp" />-->
+         android:layout_height="wrap_content"
+         android:background="#3F51B5" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
