@@ -18,14 +18,21 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/NumUsuario"
+            android:id="@+id/editNumUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-
             android:text="@string/NumeroUsuarios"
             android:textColor="@color/white"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/txtNumUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@color/white"
+            android:text="Prueba"/>
 
 
 
