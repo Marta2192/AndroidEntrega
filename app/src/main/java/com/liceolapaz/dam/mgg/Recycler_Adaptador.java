@@ -35,7 +35,7 @@ public class Recycler_Adaptador extends RecyclerView.Adapter<Recycler_Adaptador.
         public void bindUsuario(Usuarios t) {
             txtNombreUser.setText(t.getNombreUser());
             txtIdiomaUser.setText(t.getIdiomaUser());
-            txtEdadUser.setText(t.getEdadUser());
+            txtEdadUser.setText("Edad: " +t.getEdadUser());
 
         }
     }

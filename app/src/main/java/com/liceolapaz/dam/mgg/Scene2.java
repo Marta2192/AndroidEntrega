@@ -31,7 +31,7 @@ public class Scene2 extends AppCompatActivity {
 
         datos = new ArrayList<Usuarios>();
         for (int i = 1; i < 9; i++) {
-            datos.add(new Usuarios("Nombre: ", "Idioma: ", "Edad: " + i));
+            datos.add(new Usuarios("Nombre: ", "Idioma: ",  0 ));
 
         }
 
