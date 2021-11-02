@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
                 if (usuario.equals("admin") && password.equals("liceo")) {
                     ctlLogin.setMensaje("Login correcto!");
+
+
                     Intent intent =
                             new Intent(MainActivity.this, Scene2.class);
 

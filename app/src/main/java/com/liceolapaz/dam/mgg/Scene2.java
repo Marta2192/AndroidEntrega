@@ -30,8 +30,10 @@ public class Scene2 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         datos = new ArrayList<Usuarios>();
-        for (int i = 1; i < 9; i++)
-            datos.add(new Usuarios("Nombre " + i));
+        for (int i = 1; i < 9; i++) {
+            datos.add(new Usuarios("Nombre: ", "Idioma: ", "Edad: " + i));
+
+        }
 
         recView = (RecyclerView) findViewById(R.id.recView);
         recView.setHasFixedSize(true);
@@ -41,14 +43,14 @@ public class Scene2 extends AppCompatActivity {
         adaptador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.i("RecyclerView", "Pulsado el elemento " + recView.getChildAdapterPosition(v));
+                Log.i("RecyclerView", "Pulsado " + recView.getChildAdapterPosition(v));
             }
         });
 
         recView.setAdapter(adaptador);
 
         recView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        //recView.setLayoutManager(new GridLayoutManager(this, 3));
+
 
         recView.addItemDecoration(
                 new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));

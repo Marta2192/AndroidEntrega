@@ -5,7 +5,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -20,17 +19,23 @@ public class Recycler_Adaptador extends RecyclerView.Adapter<Recycler_Adaptador.
             extends RecyclerView.ViewHolder {
 
         private TextView txtNombreUser;
+        private TextView txtIdiomaUser;
+        private TextView txtEdadUser;
 
 
         public UsuariosViewHolder(View itemView) {
             super(itemView);
 
-            txtNombreUser = (TextView) itemView.findViewById(R.id.lblNombreUser);
+            txtNombreUser = (TextView) itemView.findViewById(R.id.txtNombreUser);
+            txtIdiomaUser = (TextView) itemView.findViewById(R.id.txtIdiomaUser);
+            txtEdadUser = (TextView) itemView.findViewById(R.id.txtEdadUser);
 
         }
 
         public void bindUsuario(Usuarios t) {
-            txtNombreUser.setText(t.getUsuario());
+            txtNombreUser.setText(t.getNombreUser());
+            txtIdiomaUser.setText(t.getIdiomaUser());
+            txtEdadUser.setText(t.getEdadUser());
 
         }
     }
