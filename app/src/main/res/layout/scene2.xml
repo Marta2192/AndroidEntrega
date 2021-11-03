@@ -15,7 +15,8 @@
         android:background="#3F51B5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:gravity="right"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/editNumUsuario"
@@ -24,17 +25,20 @@
             android:layout_gravity="right"
             android:text="@string/NumeroUsuarios"
             android:textColor="@color/white"
+            android:textSize="16dp"
             android:textStyle="bold" />
 
-        <EditText
+        <TextView
             android:id="@+id/txtNumUsuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:textColor="@color/white"
-            android:text="Prueba"/>
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="  Pruebaaaa"/>
 
-
+    </LinearLayout>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -42,5 +46,5 @@
          android:layout_width="match_parent"
          android:layout_height="wrap_content" />
 
-    </LinearLayout>
+
 </LinearLayout>

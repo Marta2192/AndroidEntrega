@@ -6,7 +6,7 @@
     android:background="#3F51B5"
     android:textColor="@color/white">
 
-    <EditText android:id="@+id/txtNombreUser"
+    <TextView android:id="@+id/txtNombreUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <EditText android:id="@+id/txtIdiomaUser"
+    <TextView android:id="@+id/txtIdiomaUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -26,7 +26,7 @@
         android:layout_gravity="right"
         android:textColor="@color/white"/>
 
-    <EditText android:id="@+id/txtEdadUser"
+    <TextView android:id="@+id/txtEdadUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
