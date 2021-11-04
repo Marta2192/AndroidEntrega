@@ -1,5 +1,7 @@
 package com.liceolapaz.dam.mgg;
 
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -18,8 +20,8 @@ import java.util.ArrayList;
 public class Scene2 extends AppCompatActivity {
 
     private RecyclerView recView;
-
-    private ArrayList<Usuarios> datos;
+    private ArrayList<Usuario> datos;
+    private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +31,17 @@ public class Scene2 extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        datos = new ArrayList<Usuarios>();
+        datos = new ArrayList<Usuario>();
         for (int i = 1; i < 9; i++) {
-            datos.add(new Usuarios("Nombre: ", "Idioma: ",  0 ));
+            datos.add(new Usuario("Nombre: ", "Idioma: ",  0 ));
 
         }
+        UsuariosSQLite usersBD =
+                new UsuariosSQLite(this, "DBUsuarios", null, 1);
+        db = usersBD.getWritableDatabase();
+
+        cargarUsers();
+
 
         recView = (RecyclerView) findViewById(R.id.recView);
         recView.setHasFixedSize(true);
@@ -58,6 +66,8 @@ public class Scene2 extends AppCompatActivity {
         recView.setItemAnimator(new DefaultItemAnimator());
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -69,10 +79,20 @@ public class Scene2 extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_nuevo:
                 Log.i("Appbar", "Nuevo!");
+                Intent intent =
+                        new Intent(Scene2.this, Scene3.class);
+
+                startActivity(intent);
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void cargarUsers() {
+
+        //Rellenaremos este método cuando hayamos creado la escena3
     }
 
 

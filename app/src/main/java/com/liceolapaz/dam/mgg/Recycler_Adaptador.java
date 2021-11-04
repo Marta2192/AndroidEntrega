@@ -13,7 +13,7 @@ public class Recycler_Adaptador extends RecyclerView.Adapter<Recycler_Adaptador.
         implements View.OnClickListener{
 
     private View.OnClickListener listener;
-    private ArrayList<Usuarios> datos;
+    private ArrayList<Usuario> datos;
 
     public static class UsuariosViewHolder
             extends RecyclerView.ViewHolder {
@@ -32,15 +32,15 @@ public class Recycler_Adaptador extends RecyclerView.Adapter<Recycler_Adaptador.
 
         }
 
-        public void bindUsuario(Usuarios t) {
-            txtNombreUser.setText(t.getNombreUser());
-            txtIdiomaUser.setText(t.getIdiomaUser());
-            txtEdadUser.setText("Edad: " +t.getEdadUser());
+        public void bindUsuario(Usuario u) {
+            txtNombreUser.setText(u.getNombreUser());
+            txtIdiomaUser.setText(u.getIdiomaUser());
+            txtEdadUser.setText("Edad: " +u.getEdadUser());
 
         }
     }
 
-    public Recycler_Adaptador(ArrayList<Usuarios> datos) {
+    public Recycler_Adaptador(ArrayList<Usuario> datos) {
         this.datos = datos;
     }
 
@@ -55,7 +55,7 @@ public class Recycler_Adaptador extends RecyclerView.Adapter<Recycler_Adaptador.
 
     @Override
     public void onBindViewHolder(UsuariosViewHolder viewHolder, int pos) {
-        Usuarios item = datos.get(pos);
+        Usuario item = datos.get(pos);
         viewHolder.bindUsuario(item);
     }
 

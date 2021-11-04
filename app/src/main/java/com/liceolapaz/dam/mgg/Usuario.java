@@ -1,19 +1,19 @@
 package com.liceolapaz.dam.mgg;
 
-public class Usuarios {
+public class Usuario {
     private String nombreUser;
     private String idiomaUser;
     private int edadUser;
     private String mailUser;
     private String passwordUser;
 
-    public Usuarios(String nombreUser, String idiomaUser, int edadUser) {
+    public Usuario(String nombreUser, String idiomaUser, int edadUser) {
         this.nombreUser = nombreUser;
         this.idiomaUser = idiomaUser;
         this.edadUser = edadUser;
     }
 
-    public Usuarios(String nombreUser, String idiomaUser, int edadUser, String mailUser, String passwordUser) {
+    public Usuario(String nombreUser, String idiomaUser, int edadUser, String mailUser, String passwordUser) {
         this.nombreUser = nombreUser;
         this.idiomaUser = idiomaUser;
         this.edadUser = edadUser;
