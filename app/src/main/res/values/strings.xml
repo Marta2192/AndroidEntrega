@@ -7,5 +7,13 @@
     <string name="ListaUsuarios">Lista de Usuarios</string>
     <string name="NumeroUsuarios">Número de Usuarios:</string>
     <string name="mail">Email</string>
+    <string name="pass">Contraseña</string>
+    <string name="idioma">Idioma</string>
+    <string name="edad">Edad</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="Eliminar">Eliminar</string>
+    <string name="nuevoUser">Nuevo Usuario</string>
 
 </resources>
