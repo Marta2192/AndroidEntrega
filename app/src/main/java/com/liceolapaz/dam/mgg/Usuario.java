@@ -7,12 +7,6 @@ public class Usuario {
     private String mailUser;
     private String passwordUser;
 
-    public Usuario(String nombreUser, String idiomaUser, int edadUser) {
-        this.nombreUser = nombreUser;
-        this.idiomaUser = idiomaUser;
-        this.edadUser = edadUser;
-    }
-
     public Usuario(String nombreUser, String idiomaUser, int edadUser, String mailUser, String passwordUser) {
         this.nombreUser = nombreUser;
         this.idiomaUser = idiomaUser;
@@ -49,16 +43,8 @@ public class Usuario {
         return mailUser;
     }
 
-    public void setMailUser(String mailUser) {
-        this.mailUser = mailUser;
-    }
-
     public String getPasswordUser() {
         return passwordUser;
-    }
-
-    public void setPasswordUser(String passwordUser) {
-        this.passwordUser = passwordUser;
     }
 }
 

@@ -23,7 +23,7 @@ public class UsuariosSQLite extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //Se ejecuta la sentencia SQL de creación de la tabla
+
         db.execSQL(sqlCreate);
     }
 

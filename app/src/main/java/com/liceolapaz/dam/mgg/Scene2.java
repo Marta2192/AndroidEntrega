@@ -32,13 +32,12 @@ public class Scene2 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         datos = new ArrayList<Usuario>();
-        for (int i = 1; i < 9; i++) {
-            datos.add(new Usuario("Nombre: ", "Idioma: ",  0 ));
 
-        }
-        UsuariosSQLite usersBD =
+        UsuariosSQLite usersDB =
                 new UsuariosSQLite(this, "DBUsuarios", null, 1);
-        db = usersBD.getWritableDatabase();
+        db = usersDB.getWritableDatabase();
+
+        
 
         cargarUsers();
 
