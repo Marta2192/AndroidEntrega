@@ -6,7 +6,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class UsuariosSQLite extends SQLiteOpenHelper {
 
-    String sqlCreate = "CREATE TABLE Usuarios (Email TEXT, Contraseña TEXT, Idioma TEXT, Edad INTEGER, Nombre TEXT)";
+
+
+    String sqlCreate = "CREATE TABLE IF NOT EXISTS Usuarios" +
+            "(Email TEXT PRIMARY KEY," +
+            " Contraseña TEXT NOT NULL," +
+            " Idioma TEXT NOT NULL," +
+            " Edad INTEGER NOT NULL," +
+            " Nombre TEXT NOT NULL)";
 
     public UsuariosSQLite(Context contexto, String nombre,
                           SQLiteDatabase.CursorFactory factory, int version) {
