@@ -37,7 +37,7 @@ public class Scene2 extends AppCompatActivity {
                 new UsuariosSQLite(this, "DBUsuarios", null, 1);
         db = usersDB.getWritableDatabase();
 
-        
+
 
         cargarUsers();
 
