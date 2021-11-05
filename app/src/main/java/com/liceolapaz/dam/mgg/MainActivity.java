@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
         ctlLogin = (Login) findViewById(R.id.CtlLogin);
 
-        ctlLogin.setOnLoginListener(new OnLoginListener() {
+        ctlLogin.setOnLgnListener(new OnLgnListener() {
             int contador = 0;
             @Override
-            public void onLogin(String usuario, String password) {
+            public void onLgn(String usuario, String password) {
 
 
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
                 if(!usuario.equals("admin") || !password.equals("liceo")) {
-                    ctlLogin.setMensaje("Usuario y/o contraseña incorrectos.");
+                    ctlLogin.setMensaje("Usuar/o contraseña incorrectos.");
                     ++contador;
                 }
 

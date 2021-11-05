@@ -20,7 +20,7 @@ public class Login extends LinearLayout {
     private Button btnLogin;
     private TextView lblMensaje;
 
-    private OnLoginListener listener;
+    private OnLgnListener listener;
 
     public Login(Context context) {
         super(context);
@@ -59,14 +59,14 @@ public class Login extends LinearLayout {
         asignarEventos();
     }
 
-    public void setOnLoginListener(OnLoginListener l) {
+    public void setOnLgnListener(OnLgnListener l) {
         listener = l;
     }
 
     private void asignarEventos() {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                listener.onLogin(txtUsuario.getText().toString(),
+                listener.onLgn(txtUsuario.getText().toString(),
                         txtPassword.getText().toString());
             }
         });
