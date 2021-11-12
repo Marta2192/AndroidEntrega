@@ -60,15 +60,17 @@ public class Scene3 extends AppCompatActivity {
 
         Bundle bundle = this.getIntent().getExtras();
 
-        txtMail.setText(bundle.getString("MAIL"));
-        txtPass.setText(bundle.getString("PASS"));
 
-        if(bundle.getString("MAIL") != null) {
+
+        if(bundle != null) {
+            txtMail.setText(bundle.getString("MAIL"));
+            txtPass.setText(bundle.getString("PASS"));
             spIdioma.setSelection(obtenerPosicionSpinner(spIdioma, bundle.getString("IDIOMA")), true);
             txtEdad.setText(String.valueOf(bundle.getInt("EDAD")));
+            txtNombreUsuario.setText(bundle.getString("NOMBRE"));
+
         }
 
-        txtNombreUsuario.setText(bundle.getString("NOMBRE"));
 
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
