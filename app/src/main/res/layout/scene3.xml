@@ -18,7 +18,6 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <!--android:background="#3F51B5" ESTE ES EL COLOR QUE DEBE TENER UNA VEZ PINTEMOS BORDES-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

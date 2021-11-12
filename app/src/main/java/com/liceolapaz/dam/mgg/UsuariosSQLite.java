@@ -9,11 +9,11 @@ public class UsuariosSQLite extends SQLiteOpenHelper {
 
 
     String sqlCreate = "CREATE TABLE IF NOT EXISTS Usuarios" +
-            "(Email TEXT PRIMARY KEY," +
-            " Contraseña TEXT NOT NULL," +
-            " Idioma TEXT NOT NULL," +
-            " Edad INTEGER NOT NULL," +
-            " Nombre TEXT NOT NULL)";
+            "(mail TEXT PRIMARY KEY," +
+            " password TEXT NOT NULL," +
+            " idioma TEXT CHECK(idioma IN('ES','GL','EN')) ," +
+            " edad INTEGER NOT NULL," +
+            " nombre TEXT NOT NULL)";
 
     public UsuariosSQLite(Context contexto, String nombre,
                           SQLiteDatabase.CursorFactory factory, int version) {

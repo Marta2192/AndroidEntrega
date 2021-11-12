@@ -25,6 +25,7 @@
             android:layout_gravity="right"
             android:text="@string/NumeroUsuarios"
             android:textColor="@color/white"
+
             android:textSize="16dp"
             android:textStyle="bold" />
 
@@ -33,10 +34,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:paddingLeft="10dp"
             android:textColor="@color/white"
             android:textSize="16dp"
+            android:paddingRight="10dp"
             android:textStyle="bold"
-            android:text="  Pruebaaaa"/>
+            />
 
     </LinearLayout>
 
