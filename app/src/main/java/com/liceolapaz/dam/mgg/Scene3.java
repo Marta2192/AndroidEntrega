@@ -78,6 +78,7 @@ public class Scene3 extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 Dialogo dialogo = new Dialogo(Scene3.this);
                 dialogo.show(fragmentManager, "tagConfirmacion");
+
             }
         });
 
@@ -91,8 +92,12 @@ public class Scene3 extends AppCompatActivity {
                 eliminar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        eliminarUsuario();
+                        FragmentManager fragmentManager = getSupportFragmentManager();
+                        Dialogo_Eliminar dialogo_eliminar = new Dialogo_Eliminar(Scene3.this);
+                        dialogo_eliminar.show(fragmentManager, "tagCancelacion");
+                        
                     }
+
                 });
 
                 spIdioma.setOnItemSelectedListener(
