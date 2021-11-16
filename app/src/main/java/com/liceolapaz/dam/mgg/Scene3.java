@@ -13,7 +13,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 import android.widget.Toolbar;
+
 
 public class Scene3 extends AppCompatActivity {
 
@@ -84,10 +86,17 @@ public class Scene3 extends AppCompatActivity {
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                Dialogo dialogo = new Dialogo(Scene3.this);
-                dialogo.show(fragmentManager, "tagConfirmacion");
 
+
+                if(txtMail.getText().toString() == null|| txtPass.getText().toString()==null || stringIdioma == null||
+                txtEdad.getText().toString() == null || txtNombreUsuario.getText().toString() == null){
+
+                    Toast.makeText(getApplicationContext(), "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
+                }else {
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    Dialogo dialogo = new Dialogo(Scene3.this);
+                    dialogo.show(fragmentManager, "tagConfirmacion");
+                }
 
             }
         });
