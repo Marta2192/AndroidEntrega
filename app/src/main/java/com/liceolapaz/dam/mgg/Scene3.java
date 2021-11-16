@@ -85,7 +85,10 @@ public class Scene3 extends AppCompatActivity {
                 cancelar.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        cancelar();
+                        FragmentManager fragmentManager = getSupportFragmentManager();
+                        Dialogo_Cancelar dialogo_cancelar = new Dialogo_Cancelar(Scene3.this);
+                        dialogo_cancelar.show(fragmentManager, "tagCancelacion");
+
                     }
                 });
 
@@ -94,8 +97,8 @@ public class Scene3 extends AppCompatActivity {
                     public void onClick(View v) {
                         FragmentManager fragmentManager = getSupportFragmentManager();
                         Dialogo_Eliminar dialogo_eliminar = new Dialogo_Eliminar(Scene3.this);
-                        dialogo_eliminar.show(fragmentManager, "tagCancelacion");
-                        
+                        dialogo_eliminar.show(fragmentManager, "tagBorrar");
+
                     }
 
                 });
