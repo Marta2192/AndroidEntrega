@@ -69,6 +69,9 @@ public class Scene3 extends AppCompatActivity {
             txtEdad.setText(String.valueOf(bundle.getInt("EDAD")));
             txtNombreUsuario.setText(bundle.getString("NOMBRE"));
 
+            }else{
+            eliminar.setVisibility(View.GONE);
+
         }
 
 
@@ -79,8 +82,11 @@ public class Scene3 extends AppCompatActivity {
                 Dialogo dialogo = new Dialogo(Scene3.this);
                 dialogo.show(fragmentManager, "tagConfirmacion");
 
+
             }
         });
+
+
 
                 cancelar.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -91,6 +97,8 @@ public class Scene3 extends AppCompatActivity {
 
                     }
                 });
+
+
 
                 eliminar.setOnClickListener(new View.OnClickListener() {
                     @Override
