@@ -25,7 +25,7 @@ public class Scene2 extends AppCompatActivity {
     private ArrayList<Usuario> datos;
     private SQLiteDatabase db;
     private TextView numUsuario;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

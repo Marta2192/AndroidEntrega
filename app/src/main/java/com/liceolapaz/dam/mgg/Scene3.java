@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toolbar;
 
 public class Scene3 extends AppCompatActivity {
 
@@ -27,6 +28,7 @@ public class Scene3 extends AppCompatActivity {
     private EditText txtNombreUsuario;
     private String stringIdioma;
     private String[] info;
+    private Toolbar toolbarUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class Scene3 extends AppCompatActivity {
                 new UsuariosSQLite(this, "DBUsuarios", null, 1);
 
         db = usersDB.getWritableDatabase();
+        toolbarUser = (Toolbar) findViewById(R.id.toolbarUser);
         aceptar = (Button) findViewById(R.id.btAceptar);
         cancelar = (Button) findViewById(R.id.btCancelar);
         eliminar = (Button) findViewById(R.id.btEliminar);
@@ -68,9 +71,12 @@ public class Scene3 extends AppCompatActivity {
             spIdioma.setSelection(obtenerPosicionSpinner(spIdioma, bundle.getString("IDIOMA")), true);
             txtEdad.setText(String.valueOf(bundle.getInt("EDAD")));
             txtNombreUsuario.setText(bundle.getString("NOMBRE"));
+            toolbarUser.setTitle(txtNombreUsuario.getText() + " (" + txtMail.getText() + ")");
 
             }else{
             eliminar.setVisibility(View.GONE);
+            toolbarUser.setTitle("Nuevo Usuario");
+
 
         }
 
