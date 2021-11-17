@@ -88,8 +88,10 @@ public class Scene3 extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                if(txtMail.getText().toString() == null|| txtPass.getText().toString()==null || stringIdioma == null||
-                txtEdad.getText().toString() == null || txtNombreUsuario.getText().toString() == null){
+
+                if(txtMail.getText().toString().isEmpty() || txtPass.getText().toString().isEmpty()
+                    || spIdioma.getSelectedItemPosition() == 0 || txtEdad.getText().toString().isEmpty() ||
+                        txtNombreUsuario.getText().toString().isEmpty()){
 
                     Toast.makeText(getApplicationContext(), "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show();
                 }else {
@@ -194,4 +196,15 @@ public class Scene3 extends AppCompatActivity {
                 Intent intent = new Intent(Scene3.this, Scene2.class);
                 startActivity(intent);
             }
+
+          /* System.err.println("HOLITAAAAAAAA" + spIdioma.getSelectedItem());
+                if( isEmptyOrNull(txtMail.getText().toString())
+            || isEmptyOrNull(txtPass.getText().toString())
+            || spIdioma.getSelectedItem() != null
+            || isEmptyOrNull(txtEdad.getText().toString())
+            || isEmptyOrNull(txtNombreUsuario.getText().toString())) {
+        private boolean isEmptyOrNull(String value){
+            return value == null || value.isEmpty();
+        }
+    }*/
         }
