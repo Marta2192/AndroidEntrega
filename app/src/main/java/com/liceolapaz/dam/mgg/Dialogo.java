@@ -33,22 +33,28 @@ public class Dialogo extends DialogFragment {
                 .setPositiveButton("SÍ", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Log.i("Dialogos", "Confirmacion Aceptada.");
-                        System.out.println(id);
-                        Dialogo.this.getDatos().addUsuario();
-                        dialog.cancel();
+
+                        if(Dialogo.this.scene3.isEditable()==false){
+                            Dialogo.this.getDatos().addUsuario();
+
+                        }else{
+                            Log.i("Dialogos", "Actualizar dialogo.");
+                            Dialogo.this.getDatos().actualizarUser();
+
+                        }
+
+
                     }
                 })
                 .setNegativeButton("NO", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Log.i("Dialogos", "Confirmacion Denegada.");
-                        System.out.println(id);
                         dialog.cancel();
                     }
                 })
                 .setNeutralButton("Cancelar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Log.i("Dialogos", "Confirmacion Cancelada.");
-                        System.out.println(id);
                         dialog.cancel();
                     }
                 });

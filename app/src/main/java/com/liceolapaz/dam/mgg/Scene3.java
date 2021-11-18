@@ -7,6 +7,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,6 +32,7 @@ public class Scene3 extends AppCompatActivity {
     private String stringIdioma;
     private String[] info;
     private Toolbar toolbarUser;
+    private boolean editable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class Scene3 extends AppCompatActivity {
         txtEdad = (EditText) findViewById(R.id.txtEdad);
         txtNombreUsuario = (EditText) findViewById(R.id.txtNombreUsuario);
 
+
         info = new String[]{"Selecciona idioma:", "Español(ES)", "Gallego(GL)", "Inglés(EN)"};
 
         ArrayAdapter<String> adaptador =
@@ -69,15 +72,19 @@ public class Scene3 extends AppCompatActivity {
 
         if(bundle != null) {
             txtMail.setText(bundle.getString("MAIL"));
+            txtMail.setEnabled(false);
             txtPass.setText(bundle.getString("PASS"));
             spIdioma.setSelection(obtenerPosicionSpinner(spIdioma, bundle.getString("IDIOMA")), true);
+            stringIdioma=bundle.getString("IDIOMA");
             txtEdad.setText(String.valueOf(bundle.getInt("EDAD")));
             txtNombreUsuario.setText(bundle.getString("NOMBRE"));
             toolbarUser.setTitle(txtNombreUsuario.getText() + " (" + txtMail.getText() + ")");
+            editable = true;
 
             }else{
             eliminar.setVisibility(View.GONE);
             toolbarUser.setTitle("Nuevo Usuario");
+            editable = false;
 
 
         }
@@ -102,7 +109,6 @@ public class Scene3 extends AppCompatActivity {
 
             }
         });
-
 
 
                 cancelar.setOnClickListener(new View.OnClickListener() {
@@ -197,14 +203,24 @@ public class Scene3 extends AppCompatActivity {
                 startActivity(intent);
             }
 
-          /* System.err.println("HOLITAAAAAAAA" + spIdioma.getSelectedItem());
-                if( isEmptyOrNull(txtMail.getText().toString())
-            || isEmptyOrNull(txtPass.getText().toString())
-            || spIdioma.getSelectedItem() != null
-            || isEmptyOrNull(txtEdad.getText().toString())
-            || isEmptyOrNull(txtNombreUsuario.getText().toString())) {
-        private boolean isEmptyOrNull(String value){
-            return value == null || value.isEmpty();
+            public void actualizarUser(){
+                Log.i("Dialogos", "Actualizar scene3.");
+                ContentValues valoresUser = new ContentValues();
+                valoresUser.put("mail", txtMail.getText().toString());
+                valoresUser.put("password", txtPass.getText().toString());
+                valoresUser.put("idioma", stringIdioma);
+                valoresUser.put("edad", Integer.parseInt(txtEdad.getText().toString()));
+                valoresUser.put("nombre", txtNombreUsuario.getText().toString());
+                db.update("Usuarios", valoresUser, "mail='" + txtMail.getText().toString() +"'", null);
+                Intent intent = new Intent(Scene3.this, Scene2.class);
+                startActivity(intent);
+         }
+
+        public boolean isEditable() {
+            return editable;
         }
-    }*/
+
+        public void setEditable(boolean editable) {
+            this.editable = editable;
         }
+}
